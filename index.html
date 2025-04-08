@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Solar Hub Innovations</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,6 +21,9 @@
       color: white;
       text-align: center;
       padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header img {
@@ -40,6 +47,9 @@
       background-color: #1e3a8a;
       display: flex;
       justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -49,11 +59,13 @@
       position: relative;
       transition: all 0.3s ease;
     }
+
     nav a:hover {
       background-color: #63b3ed;
       color: black;
       transform: translateY(-3px);
     }
+
     nav a::after {
       content: '';
       position: absolute;
@@ -64,6 +76,7 @@
       background-color: #ffd700;
       transition: width 0.3s ease;
     }
+
     nav a:hover::after {
       width: 100%;
     }
@@ -76,6 +89,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
+
     section:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -83,33 +97,42 @@
 
     section h2 {
       color: #1e3a8a;
+      text-align: center;
     }
 
     .container {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .service-card {
       flex: 1;
+      min-width: 250px;
+      max-width: 300px;
       padding: 20px;
-      background-color: #e0f7fa;
-      border-radius: 8px;
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      border-radius: 12px;
       transition: all 0.3s ease;
+      text-align: center;
     }
+
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      background-color: #b3e5fc;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #b3e5fc, #4dd0e1);
+      color: white;
     }
 
     .founder {
       transition: all 0.3s ease;
     }
+
     .founder:hover {
       transform: translateY(-5px);
     }
+
     .founder img {
       width: 250px;
       height: 300px;
@@ -120,6 +143,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: inherit;
     }
+
     .founder:hover img {
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
@@ -159,7 +183,9 @@
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
+
     button:hover {
       background-color: #63b3ed;
       transform: translateY(-3px);
@@ -170,29 +196,36 @@
       background-color: #1e3a8a;
       color: white;
       text-align: center;
-      padding: 20px;
-      position: relative;
+      padding: 30px 20px;
     }
 
-    .social-icons {
-      margin-top: 10px;
-    }
-
-    .social-icons a {
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       color: white;
-      margin: 0 10px;
       text-decoration: none;
-      font-size: 24px;
-      transition: color 0.3s ease;
+      font-size: 16px;
+      margin: 10px;
+      transition: all 0.3s ease;
     }
 
-    .social-icons a:hover {
-      color: #ffd700;
+    .footer-links a:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-links a.whatsapp:hover { color: #25d366; }
+    .footer-links a.call:hover { color: #00ffcc; }
+    .footer-links a.email:hover { color: #ffd700; }
+
+    .footer-links i {
+      font-size: 22px;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
-
-  <!-- Font Awesome for Instagram icon -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -200,44 +233,44 @@
   <header>
     <img src="logo.jpg" alt="Solar Hub Innovations Logo">
     <h1>Solar Hub Innovations</h1>
-    <p>Your One-Stop Solution For All Business Needs</p>
+    <p>Your One-Stop Solution For All Business Needs 🌞⚙️</p>
   </header>
 
   <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#services">Services</a>
-    <a href="#founders">Founders</a>
-    <a href="#contact">Contact</a>
+    <a href="#home">🏠 Home</a>
+    <a href="#about">ℹ️ About Us</a>
+    <a href="#services">🛠️ Services</a>
+    <a href="#founders">👥 Founders</a>
+    <a href="#contact">📞 Contact</a>
   </nav>
 
   <!-- Home Section -->
   <section id="home">
-    <h2>Welcome</h2>
+    <h2>👋 Welcome</h2>
     <p>We provide innovative and sustainable solutions across a range of business needs including solar energy, UPS/servo systems, painting services, and petrol pump maintenance. We aim to power businesses forward with clean energy and reliable services.</p>
   </section>
 
   <!-- About Us Section -->
   <section id="about">
-    <h2>About Us</h2>
+    <h2>🔍 About Us</h2>
     <p>Solar Hub Innovations is dedicated to offering comprehensive solutions for solar and industrial needs. From installation to maintenance, our services are designed to ensure reliability, sustainability, and cost-effectiveness.</p>
   </section>
 
   <!-- Services Section -->
   <section id="services">
-    <h2>Our Services</h2>
+    <h2>💼 Our Services</h2>
     <div class="container">
       <div class="service-card">
-        <h3>Solar Panel Installation</h3>
+        <h3>☀️ Solar Panel Installation</h3>
         <p>End-to-end solar panel design and setup for homes and businesses.</p>
       </div>
       <div class="service-card">
-        <h3>Petrol Pump UPS & Servo Maintenance</h3>
+        <h3>⚡ Petrol Pump UPS & Servo Maintenance</h3>
         <p>Specialized UPS and Servo support for petrol pumps and other commercial setups.</p>
       </div>
       <div class="service-card">
-        <h3>Painting Services</h3>
+        <h3>🎨 Painting Services</h3>
         <p>Industrial and residential painting to protect and beautify your setup.</p>
       </div>
     </div>
@@ -245,16 +278,16 @@
 
   <!-- Founders Section -->
   <section id="founders">
-    <h2>Our Founders</h2>
+    <h2>🧑‍💼 Our Founders</h2>
     <div class="founders">
-      <div class="founder">
-        <img src="krishanavtar.jpg" alt="Krishanavtar Tiwari">
-        <h3>Krishanavtar Tiwari</h3>
-        <p>Founder & Visionary Leader. Expert in sustainable solutions and operations management.</p>
-      </div>
       <div class="founder">
         <img src="ankit.jpg" alt="Ankit Singh">
         <h3>Ankit Singh</h3>
+        <p>Founder & Visionary Leader. Expert in sustainable solutions and operations management.</p>
+      </div>
+      <div class="founder">
+        <img src="krishanavtar.jpg" alt="Krishanavtar Tiwari">
+        <h3>Krishanavtar Tiwari</h3>
         <p>Co-Founder & Technical Lead. Specialist in UPS systems and engineering innovation.</p>
       </div>
     </div>
@@ -262,38 +295,31 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to work with us? Send us a message!</p>
-    <form onsubmit="sendWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2>📩 Contact Us</h2>
+    <p style="text-align:center;">Have questions or want to work with us? Send us a message!</p>
+    <form action="http://localhost:3000/send-sms" method="POST">
+      <input type="text" name="name" placeholder="👤 Your Name" required />
+      <input type="email" name="email" placeholder="📧 Your Email" required />
+      <textarea name="message" placeholder="💬 Your Message" required></textarea>
+      <button type="submit">📤 Send Message</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Solar Hub Innovations. All Rights Reserved.</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/solar_hub_innovations?igsh=MXFsamJraXk5NjBnYw==" target="_blank">
-        <i class="fab fa-instagram"></i>
+    <div class="footer-links">
+      <a class="whatsapp" href="https://wa.me/917014195109" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a class="call" href="tel:+917014361229">
+        <i class="fas fa-phone-alt"></i> Call Us
+      </a>
+      <a class="email" href="mailto:solarhubinnovations2021@gmail.com">
+        <i class="fas fa-envelope"></i> Email Us
       </a>
     </div>
   </footer>
 
-  <!-- WhatsApp Script -->
-  <script>
-    function sendWhatsApp() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      const text = New Inquiry from Website:\nName: ${name}\nEmail: ${email}\nMessage: ${message};
-      const url = https://wa.me/917014195109?text=${encodeURIComponent(text)};
-      window.open(url, '_blank');
-    }
-  </script>
-
 </body>
-</html>  
+</html>
